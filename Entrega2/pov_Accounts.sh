@@ -16,11 +16,15 @@ read clientPassword
 echo -n "\nIniciais do pais: "
 read clientCountry
 
+echo "INSERT INTO Client  VALUES($clientID,'$yearB-$monthB-$dayB','$clientName','$clientEmail','$clientPassword','$clientCountry')" >> "povoar.sql"
+
 echo "=== Povoando Country ==="
 echo -n "Inicias do pais:  "
 read countryInitials
 echo -n"\nNome do Pais: "
 read countryName
+
+echo "INSERT INTO Client  VALUES($clientID,'$yearB-$monthB-$dayB','$clientName','$clientEmail','$clientPassword','$clientCountry')" >> "povoar.sql"
 
 echo "=== Povoando Account ==="
 echo -n "Id account: "
@@ -31,7 +35,8 @@ echo -n "screen number: "
 read screenNumber
 echo -n "price: "
 read price
-echo "INSERT INTO Client  VALUES($clientID,'$yearB-$monthB-$dayB','$clientName','$clientEmail','$clientPassword','$clientCountry')" >> "povoar.sql"
-echo "INSERT INTO Country VALUES('$countryInitials','$countryName')" >> povoar.sql
-echo "INSERT INTO '$table' VALUES('$accountID','$type','$screenNumber','$price')" >> "povoar.sql"
+
+
+
+echo "INSERT INTO Account VALUES('$accountID','$type','$screenNumber','$price',$clientID)" >> "povoar.sql"
 
