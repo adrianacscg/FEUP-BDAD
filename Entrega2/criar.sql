@@ -20,10 +20,10 @@ CREATE TABLE Country (
 
 DROP TABLE IF EXISTS Account;
 CREATE TABLE Account (
-    accountID           INTEGER,
-    type                TEXT PRIMARY KEY,
-    screenNumber        INTEGER,
-    price               REAL,
+    accountID           INTEGER PRIMARY KEY,
+    type                TEXT NOT NULL,
+    screenNumber        INTEGER NOT NULL,
+    price               REAL NOT NULL,
     clientID            INTEGER UNIQUE REFERENCES Client(clientID)
 );
 
@@ -47,7 +47,6 @@ CREATE TABLE Content (
     title               TEXT,
     rating              REAL,
     releaseDate         DATE,
-    description         TEXT,
     trailer             BLOB
 );
 
