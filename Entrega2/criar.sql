@@ -52,7 +52,6 @@ CREATE TABLE Content (
     title               TEXT,
     rating              REAL,
     releaseDate         DATE,
-    description         TEXT,
     trailer             BLOB
 );
 
