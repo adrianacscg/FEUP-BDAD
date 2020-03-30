@@ -2,17 +2,6 @@ PRAGMA foreign_keys = ON;
 
 BEGIN TRANSACTION;
 
-DROP TABLE IF EXISTS ClientAccount;
-CREATE TABLE ClientAccount (
-    clientID            INTEGER PRIMARY KEY,
-    dateOfBirth         DATE NOT NULL,
-    name                TEXT NOT NULL,
-    email               TEXT NOT NULL,
-    password            TEXT NOT NULL,
-    countryInitials     TEXT NOT NULL REFERENCES Country(countryInitials),
-    account             TEXT NOT NULL REFERENCES AccountType(type)
-);
-
 DROP TABLE IF EXISTS Country;
 CREATE TABLE Country (
     countryInitials     TEXT NOT NULL PRIMARY KEY,
@@ -26,6 +15,17 @@ CREATE TABLE AccountType (
     price               REAL
 );
 
+DROP TABLE IF EXISTS ClientAccount;
+CREATE TABLE ClientAccount (
+    clientID            INTEGER PRIMARY KEY,
+    dateOfBirth         DATE NOT NULL,
+    name                TEXT NOT NULL,
+    email               TEXT NOT NULL,
+    password            TEXT NOT NULL,
+    countryInitials     TEXT NOT NULL REFERENCES Country(countryInitials),
+    account             TEXT NOT NULL REFERENCES AccountType(type)
+);
+
 DROP TABLE IF EXISTS Payment;
 CREATE TABLE Payment (
     method              TEXT PRIMARY KEY
@@ -34,12 +34,12 @@ CREATE TABLE Payment (
 DROP TABLE IF EXISTS PaymentClientAccount;
 CREATE TABLE PaymentClientAccount (
     method              TEXT REFERENCES Payment(method),
-    clientID            INTEGER REFERENCES Client(clientID),
+    clientID            INTEGER REFERENCES ClientAccount(clientID),
     PRIMARY KEY (method, clientID)
 );
 
-DROP TABLE IF EXISTS [User];
-CREATE TABLE [User] (
+DROP TABLE IF EXISTS User;
+CREATE TABLE User (
     userID              INTEGER PRIMARY KEY,
     name                TEXT,
     clientID            INTEGER REFERENCES ClientAccount(clientID)
@@ -55,30 +55,30 @@ CREATE TABLE Content (
     trailer             BLOB
 );
 
-DROP TABLE IF EXISTS [Like];
-CREATE TABLE [Like] (
-    userID              INTEGER REFERENCES [User](userID),
+DROP TABLE IF EXISTS Like;
+CREATE TABLE Like (
+    userID              INTEGER REFERENCES User(userID),
     contentID           INTEGER REFERENCES Content(contentID),
     PRIMARY KEY (userID, contentID)
 );
 
 DROP TABLE IF EXISTS Dislike;
 CREATE TABLE Dislike (
-    userID              INTEGER REFERENCES [User](userID),
+    userID              INTEGER REFERENCES User(userID),
     contentID           INTEGER REFERENCES Content(contentID),
     PRIMARY KEY (userID, contentID)
 );
 
 DROP TABLE IF EXISTS BelongsToUserList;
 CREATE TABLE BelongsToUserList (
-    userID              INTEGER REFERENCES [User](userID),
+    userID              INTEGER REFERENCES User(userID),
     contentID           INTEGER REFERENCES Content(contentID),
     PRIMARY KEY (userID, contentID)
 );
 
 DROP TABLE IF EXISTS Suggest;
 CREATE TABLE Suggest (
-    userID              INTEGER REFERENCES [User](userID),
+    userID              INTEGER REFERENCES User(userID),
     contentID           INTEGER REFERENCES Content(contentID),
     suggestionDate      DATE,
     PRIMARY KEY (userID, contentID)
@@ -108,17 +108,6 @@ CREATE TABLE ContentPerson (
     personID            INTEGER REFERENCES Person(personID),
     personRole          TEXT,
     PRIMARY KEY (contentID, personID)
-);
-
-DROP TABLE IF EXISTS Visualization;
-CREATE TABLE Visualization (
-    visualizationID     INTEGER PRIMARY KEY,
-    timeOfDay           DATETIME,
-    timeStampInitial    DATETIME,
-    timeStampFinal      DATETIME,
-    userID              INTEGER REFERENCES [User](userID),
-    movieID             INTEGER REFERENCES Movie(contentID),
-    episodeID           INTEGER REFERENCES Episode(contentID)
 );
 
 DROP TABLE IF EXISTS Movie;
@@ -156,7 +145,7 @@ CREATE TABLE Subtitles (
     language            TEXT,
     subtitlesFile       BLOB,
     episodeID           INTEGER REFERENCES Episode(episodeID),
-    movieID             INTEGER REFERENCES Movie(movieID)
+    movieID             INTEGER REFERENCES Movie(contentID) --check
 );
 
 DROP TABLE IF EXISTS Cover;
@@ -164,6 +153,17 @@ CREATE TABLE Cover (
     coverID             INTEGER PRIMARY KEY,
     coverImage          BLOB,
     contentID           INTEGER REFERENCES Content(contentID)
+);
+
+DROP TABLE IF EXISTS Visualization;
+CREATE TABLE Visualization (
+    visualizationID     INTEGER PRIMARY KEY,
+    timeOfDay           DATETIME,
+    timeStampInitial    DATETIME,
+    timeStampFinal      DATETIME,
+    userID              INTEGER REFERENCES User(userID),
+    movieID             INTEGER REFERENCES Movie(contentID),
+    episodeID           INTEGER REFERENCES Episode(episodeID)
 );
 
 COMMIT;
