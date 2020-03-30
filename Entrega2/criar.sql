@@ -2,14 +2,15 @@ PRAGMA foreign_keys = ON;
 
 BEGIN TRANSACTION;
 
-DROP TABLE IF EXISTS Client;
-CREATE TABLE Client (
+DROP TABLE IF EXISTS ClientAccount;
+CREATE TABLE ClientAccount (
     clientID            INTEGER PRIMARY KEY,
     dateOfBirth         DATE NOT NULL,
     name                TEXT NOT NULL,
     email               TEXT NOT NULL,
     password            TEXT NOT NULL,
-    countryInitials     TEXT NOT NULL REFERENCES Country(countryInitials)
+    countryInitials     TEXT NOT NULL REFERENCES Country(countryInitials),
+    account             TEXT NOT NULL REFERENCES AccountType(type)
 );
 
 DROP TABLE IF EXISTS Country;
@@ -18,26 +19,30 @@ CREATE TABLE Country (
     countryName         TEXT NOT NULL
 );
 
-DROP TABLE IF EXISTS Account;
-CREATE TABLE Account (
-    accountID           INTEGER,
+DROP TABLE IF EXISTS AccountType;
+CREATE TABLE AccountType (
     type                TEXT PRIMARY KEY,
     screenNumber        INTEGER,
-    price               REAL,
-    clientID            INTEGER UNIQUE REFERENCES Client(clientID)
+    price               REAL
 );
 
 DROP TABLE IF EXISTS Payment;
 CREATE TABLE Payment (
-    method              TEXT PRIMARY KEY,
-    accountID           INTEGER REFERENCES Account(accountID)
+    method              TEXT PRIMARY KEY
+);
+
+DROP TABLE IF EXISTS PaymentClientAccount;
+CREATE TABLE PaymentClientAccount (
+    method              TEXT REFERENCES Payment(method),
+    clientID            INTEGER REFERENCES Client(clientID),
+    PRIMARY KEY (method, clientID)
 );
 
 DROP TABLE IF EXISTS [User];
 CREATE TABLE [User] (
     userID              INTEGER PRIMARY KEY,
     name                TEXT,
-    clientID            INTEGER REFERENCES Client(clientID)
+    clientID            INTEGER REFERENCES ClientAccount(clientID)
 );
 
 DROP TABLE IF EXISTS Content;
@@ -76,6 +81,7 @@ DROP TABLE IF EXISTS Suggest;
 CREATE TABLE Suggest (
     userID              INTEGER REFERENCES [User](userID),
     contentID           INTEGER REFERENCES Content(contentID),
+    suggestionDate      DATE,
     PRIMARY KEY (userID, contentID)
 );
 
@@ -131,7 +137,6 @@ CREATE TABLE Series (
 DROP TABLE IF EXISTS Season;
 CREATE TABLE Season (
     seasonID            INTEGER PRIMARY KEY, 
-    -- chave primaria composta seasonNo e seriesID?
     seasonNumber        INTEGER,
     seriesID            INTEGER REFERENCES Series(contentID)
 );
