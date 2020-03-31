@@ -2,12 +2,12 @@
 
 INSERT INTO Country VALUES ('PT', 'Portugal');
 
-INSERT INTO AccountType VALUES ('basic', 1, 7.99);
-INSERT INTO AccountType VALUES ('standard',2, 10.99);
-INSERT INTO AccountType VALUES ('premium', 4, 13.99);
+INSERT INTO AccountType VALUES ('Basic', 1, 7.99);
+INSERT INTO AccountType VALUES ('Standard',2, 10.99);
+INSERT INTO AccountType VALUES ('Premium', 4, 13.99);
 
-INSERT INTO ClientAccount VALUES (0, '2000-04-08', 'Carlos Pereira', 'carlosa@fe.up.pt', '12345', 'PT', 'basic');
-INSERT INTO ClientAccount VALUES (1, '2000-03-07', 'Catarina Fernandes', 'catarina@fe.up.pt', '1234', 'PT', 'premium');
+INSERT INTO ClientAccount VALUES (0, '2000-04-08', 'Carlos Pereira', 'carlosa@fe.up.pt', '12345', 'PT', 'Basic');
+INSERT INTO ClientAccount VALUES (1, '2000-03-07', 'Catarina Fernandes', 'catarina@fe.up.pt', '1234', 'PT', 'Premium');
 
 INSERT INTO Payment VALUES ('Cartão');
 
@@ -32,7 +32,7 @@ INSERT INTO BelongsToUserList VALUES (0,5);
 INSERT INTO BelongsToUserList VALUES (0,0);
 INSERT INTO BelongsToUserList VALUES (0,3);
 
-INSERT INTO Suggest (userID, contentID) VALUES (0,2);
+INSERT INTO Suggest VALUES (0, 2, '2020-30-3 19:19');
 
 INSERT INTO Category VALUES ('Comédia');
 INSERT INTO Category VALUES ('Ação');
@@ -67,7 +67,7 @@ INSERT INTO ContentPerson VALUES (5, 6, 'Chicó');
 INSERT INTO ContentPerson VALUES (5, 7, 'Dora');
 INSERT INTO ContentPerson VALUES (5, 8, 'Rosinha');
 
-INSERT INTO Movie VALUES (5, x'0500', 2.30);
+INSERT INTO Movie VALUES (5, x'0500', '02:30');
 
 INSERT INTO Series VALUES (0);
 INSERT INTO Series VALUES (1);
@@ -89,8 +89,8 @@ INSERT INTO Subtitles (subtitleID, language, subtitlesFile, episodeID) VALUES (0
 INSERT INTO Cover VALUES (0, x'0500', 3);
 
 INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeStampFinal, userID, movieID)
-VALUES (0,'2013-10-07T08:23:19.120Z','2013-10-07T08:23:19.120Z','2013-10-07T08:23:19.120Z',0,5);
+VALUES (0,'2013-10-07T08:23:19.120Z','08:23','08:53',0,5);
 INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeStampFinal, userID, episodeID)
-VALUES (1,'2013-10-07T08:23:19.120Z','2013-10-07T08:23:19.120Z','2013-10-07T08:23:19.120Z',0,0);
+VALUES (1,'2013-10-07T08:23:19.120Z','18:33','18:53',0,0);
 INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeStampFinal, userID, episodeID)
-VALUES (2,'2013-10-07T08:23:19.120Z','2013-10-07T08:23:19.120Z','2013-10-07T08:23:19.120Z',0,0);
+VALUES (2,'2013-10-07T08:23:19.120Z','23:19','23:20',0,0);
