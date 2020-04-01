@@ -92,7 +92,7 @@ DROP TABLE IF EXISTS Suggest;
 CREATE TABLE Suggest (
     userID              INTEGER REFERENCES User(userID) ON DELETE CASCADE ON UPDATE CASCADE,
     contentID           INTEGER REFERENCES Content(contentID) ON DELETE CASCADE ON UPDATE CASCADE,
-    suggestionDate      DATE NOT NULL,
+    suggestionDate      DATETIME NOT NULL,
     PRIMARY KEY (userID, contentID)
 );
 

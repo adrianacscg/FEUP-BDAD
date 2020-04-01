@@ -51,12 +51,16 @@ INSERT INTO User VALUES (9,'Francisco', 3);
 INSERT INTO User VALUES (10,'Grace', 4);
 INSERT INTO User VALUES (11,'Phoebe', 4);
 
-INSERT INTO Content VALUES (0,'Series','Guerra dos Tronos',8.50,'2012-01-01','GoT_trailer.M2TS');
-INSERT INTO Content VALUES (1,'Series','Carbono Alterado',6.50,'2015-02-20','AltCarb_trailer.M2TS');
+INSERT INTO Content VALUES (0,'Series','Game of Thrones',8.50,'2012-01-01','GoT_trailer.M2TS');
+INSERT INTO Content VALUES (1,'Series','Altered Carbon',6.50,'2015-02-20','AltCarb_trailer.M2TS');
 INSERT INTO Content VALUES (2,'Series','Vikings',7.50,'2009-08-09','Vikings_trailer.M2TS');
-INSERT INTO Content VALUES (3,'Movie','Dollemite',8.50,'2018-05-01','Dollemite_trailer.M2TS');
-INSERT INTO Content VALUES (4,'Movie','Velozes e Furiosos',6.50,'2010-06-20','FastAndFurious_trailer.M2TS');
+INSERT INTO Content VALUES (3,'Movie','Dolemite',8.50,'2018-05-01','Dolemite_trailer.M2TS');
+INSERT INTO Content VALUES (4,'Movie','The Fast and the Furious',6.50,'2001-06-22','TheFastAndTheFurious_trailer.M2TS');
 INSERT INTO Content VALUES (5,'Movie','O Alto da Compadecida',7.50,'2001-06-17','OAltoDaCompadecida_trailer.M2TS');
+INSERT INTO Content VALUES (6, 'Series', 'Stranger Things',8.8, '2016.07.05', 'StrangerThings_trailer.M2TS');
+INSERT INTO Content VALUES (7, 'Series', 'Sex Education',8.3, '2019.01.11', 'SexEducation_trailer.M2TS');
+INSERT INTO Content VALUES (8, 'Series', 'Orange is the New Black', 8.1, '2013.07.11', 'OitNB_trailer.M2TS');
+INSERT INTO Content VALUES (9, 'Series', 'The Witcher', 8.3, '2019.12.20', 'TheWitcher_trailer.M2TS');
 
 INSERT INTO Like VALUES (0,5);
 INSERT INTO Like VALUES (0,0);
@@ -75,18 +79,24 @@ INSERT INTO BelongsToUserList VALUES (0,3);
 INSERT INTO Suggest VALUES (0, 2, '2020-03-30 19:19');
 INSERT INTO Suggest VALUES (1, 2, '2020-03-31 18:09');
 
-INSERT INTO Category VALUES ('Comédia');
-INSERT INTO Category VALUES ('Ação');
-INSERT INTO Category VALUES ('Aventura');
+INSERT INTO Category VALUES ('Comedy');
+INSERT INTO Category VALUES ('Action');
+INSERT INTO Category VALUES ('Adventure');
 INSERT INTO Category VALUES ('Drama');
-INSERT INTO Category VALUES ('Épico');
+INSERT INTO Category VALUES ('Epic');
+INSERT INTO Category VALUES ('Fantasy');
+INSERT INTO Category VALUES ('Horror');
 
 INSERT INTO CategoryContent VALUES (0,'Drama');
-INSERT INTO CategoryContent VALUES (1,'Ação');
-INSERT INTO CategoryContent VALUES (2,'Épico');
-INSERT INTO CategoryContent VALUES (3,'Comédia');
-INSERT INTO CategoryContent VALUES (4,'Ação');
-INSERT INTO CategoryContent VALUES (5,'Comédia');
+INSERT INTO CategoryContent VALUES (1,'Action');
+INSERT INTO CategoryContent VALUES (2,'Epic');
+INSERT INTO CategoryContent VALUES (3,'Comedy');
+INSERT INTO CategoryContent VALUES (4,'Action');
+INSERT INTO CategoryContent VALUES (5,'Comedy');
+INSERT INTO CategoryContent VALUES (6, 'Fantasy');
+INSERT INTO CategoryContent VALUES (7, 'Comedy');
+INSERT INTO CategoryContent VALUES (8, 'Comedy');
+INSERT INTO CategoryContent VALUES (9, 'Action');
 
 INSERT INTO Person VALUES (0, 'Katheryn Winnick');
 INSERT INTO Person VALUES (1, 'Travis Fimmel');
@@ -123,9 +133,9 @@ INSERT INTO Season VALUES (6, 1, 2);
 INSERT INTO Season VALUES (7, 2, 2);
 INSERT INTO Season VALUES (8, 3, 2);
 
-INSERT INTO Episode VALUES (0, 'Conto de Fadas','00:23:19',1, 'ContoDeFadasS1E1.M2TS', 0);
+INSERT INTO Episode VALUES (0, 'Winter is Coming','01:00:02',1, 'GoTS1E1.M2TS', 0);
 
-INSERT INTO Subtitles (subtitleID, language, subtitlesFile, episodeID) VALUES (0, 'PORTUGUÊS', 'ContoDeFadasS1E1SUB.xml', 0);
+INSERT INTO Subtitles (subtitleID, language, subtitlesFile, episodeID) VALUES (0, 'PORTUGUÊS', 'GoTS1E1SUBPT.xml', 0);
 
 INSERT INTO Cover VALUES (0, 'VikingsCover1.jpg', 3);
 
