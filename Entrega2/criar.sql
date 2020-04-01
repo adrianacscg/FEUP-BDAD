@@ -10,8 +10,8 @@ CREATE TABLE ClientAccount (
     name                TEXT NOT NULL,
     email               TEXT NOT NULL UNIQUE CHECK(email LIKE '%@%.%'),
     password            TEXT NOT NULL,
-    countryInitials     TEXT REFERENCES Country(countryInitials) ON DELETE SET NULL ON UPDATE CASCADE,
-    account             TEXT REFERENCES AccountType(type) ON DELETE SET NULL ON UPDATE CASCADE
+    countryInitials     TEXT NOT NULL REFERENCES Country(countryInitials) ON DELETE SET NULL ON UPDATE CASCADE,
+    account             TEXT NOT NULL REFERENCES AccountType(type) ON DELETE SET NULL ON UPDATE CASCADE
 );
 
 -- Country table
@@ -49,7 +49,7 @@ DROP TABLE IF EXISTS User;
 CREATE TABLE User (
     userID              INTEGER PRIMARY KEY,
     name                TEXT NOT NULL,
-    clientID            INTEGER REFERENCES ClientAccount(clientID) ON DELETE CASCADE ON UPDATE CASCADE
+    clientID            INTEGER NOT NULL REFERENCES ClientAccount(clientID) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 -- Content table
@@ -92,7 +92,7 @@ DROP TABLE IF EXISTS Suggest;
 CREATE TABLE Suggest (
     userID              INTEGER REFERENCES User(userID) ON DELETE CASCADE ON UPDATE CASCADE,
     contentID           INTEGER REFERENCES Content(contentID) ON DELETE CASCADE ON UPDATE CASCADE,
-    suggestionDate      DATETIME NOT NULL,
+    suggestionDate      DATE NOT NULL,
     PRIMARY KEY (userID, contentID)
 );
 
@@ -169,7 +169,7 @@ CREATE TABLE Episode (
     duration            DATETIME NOT NULL CHECK(datetime(duration) > datetime('00:00')),
     episodeNumber       INTEGER NOT NULL CHECK(episodeNumber > 0),
     contentVideo        TEXT NOT NULL,
-    seasonID            INTEGER REFERENCES Season(seasonID) ON DELETE CASCADE ON UPDATE CASCADE
+    seasonID            INTEGER NOT NULL REFERENCES Season(seasonID) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 -- Subtitles table
@@ -187,7 +187,7 @@ DROP TABLE IF EXISTS Cover;
 CREATE TABLE Cover (
     coverID             INTEGER PRIMARY KEY,
     coverImage          TEXT NOT NULL,
-    contentID           INTEGER REFERENCES Content(contentID) ON DELETE CASCADE ON UPDATE CASCADE 
+    contentID           INTEGER NOT NULL REFERENCES Content(contentID) ON DELETE CASCADE ON UPDATE CASCADE 
 );
 
 COMMIT;
