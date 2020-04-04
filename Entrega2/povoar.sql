@@ -231,7 +231,7 @@ INSERT INTO Episode VALUES (75, 'Breaking Point','00:50:02',9, 'VikingsS3E8.M2TS
 INSERT INTO Episode VALUES (76, 'The Dead','00:50:02',10, 'VikingsS3E8.M2TS', 7);
 
 
-INSERT INTO Subtitles (subtitleID, language, subtitlesFile, episodeID) VALUES (0, 'PORTUGUÊS', 'GoTS1E1SUBPT.xml', 0);
+INSERT INTO Subtitles (subtitleID, language, subtitlesFile, episodeID) VALUES (0, 'PORTUGUÊS', 'GoTS1E1SUBPT.srt', 0);
 
 INSERT INTO Cover VALUES (0, 'GameOfThrones.jpg', 0);
 INSERT INTO Cover VALUES (1, 'AlteredCarbon2.jpg', 1);
@@ -246,8 +246,8 @@ INSERT INTO Cover VALUES (9, 'WitcherThe.jpg', 9);
 
 
 INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeStampFinal, userID, movieID)
-VALUES (0,'2013-10-07T08:23:19.120Z','08:23','08:53',0,5);
+VALUES (0,'2013-10-07T08:23:19.120Z','08:23','08:53',10,3);
 INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeStampFinal, userID, episodeID)
-VALUES (1,'2013-10-07T08:23:19.120Z','18:33','18:53',0,0);
+VALUES (1,'2013-10-07T08:23:19.120Z','18:33','18:53',2,10);
 INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeStampFinal, userID, episodeID)
-VALUES (2,'2013-10-07T08:23:19.120Z','23:19','23:20',0,0);
+VALUES (2,'2013-10-07T08:23:19.120Z','23:19','23:20',0,50);
