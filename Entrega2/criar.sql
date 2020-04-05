@@ -136,7 +136,7 @@ CREATE TABLE Visualization (
     userID              INTEGER NOT NULL REFERENCES User(userID) ON DELETE SET NULL ON UPDATE CASCADE,
     movieID             INTEGER REFERENCES Movie(contentID) ON DELETE CASCADE ON UPDATE CASCADE,
     episodeID           INTEGER REFERENCES Episode(episodeID) ON DELETE CASCADE ON UPDATE CASCADE,
-    CHECK(timeStampFinal > timeStampInitial)
+    CHECK(datetime(timeStampFinal) > datetime(timeStampInitial))
 );
 
 -- Movie table
