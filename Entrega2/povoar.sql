@@ -542,6 +542,14 @@ INSERT INTO Subtitles (subtitleID, language, subtitlesFile, movieID) VALUES (83,
 INSERT INTO Subtitles (subtitleID, language, subtitlesFile, movieID) VALUES (84, 'English', 'RomaSUBEN.srt', 14);
 INSERT INTO Subtitles (subtitleID, language, subtitlesFile, movieID) VALUES (85, 'Português', 'BirdBoxSUBPT.srt', 15);
 INSERT INTO Subtitles (subtitleID, language, subtitlesFile, movieID) VALUES (86, 'Português', 'ToAllTheBoys1SUBPT.srt', 16);
+INSERT INTO Subtitles (subtitleID, language, subtitlesFile, episodeID) VALUES (87, 'Espanol', 'StrangerThingsS1E1SUBES.srt', 77);
+INSERT INTO Subtitles (subtitleID, language, subtitlesFile, episodeID) VALUES (88, 'Espanol', 'StrangerThingsS1E2SUBES.srt', 78);
+INSERT INTO Subtitles (subtitleID, language, subtitlesFile, episodeID) VALUES (89, 'Espanol', 'StrangerThingsS1E3SUBES.srt', 79);
+INSERT INTO Subtitles (subtitleID, language, subtitlesFile, episodeID) VALUES (90, 'Espanol', 'StrangerThingsS1E4SUBES.srt', 80);
+INSERT INTO Subtitles (subtitleID, language, subtitlesFile, episodeID) VALUES (91, 'Espanol', 'StrangerThingsS1E5SUBES.srt', 81);
+INSERT INTO Subtitles (subtitleID, language, subtitlesFile, episodeID) VALUES (92, 'Espanol', 'StrangerThingsS1E6SUBES.srt', 82);
+INSERT INTO Subtitles (subtitleID, language, subtitlesFile, episodeID) VALUES (93, 'Espanol', 'StrangerThingsS1E7SUBES.srt', 83);
+INSERT INTO Subtitles (subtitleID, language, subtitlesFile, episodeID) VALUES (94, 'Espanol', 'StrangerThingsS1E8SUBES.srt', 84);
 
 
 INSERT INTO Cover VALUES (0, 'GameOfThrones.jpg', 0);
