@@ -455,7 +455,6 @@ INSERT INTO Episode VALUES (200, 'Rare Species','01:00:02',6, 'TheWitcherS1E6.M2
 INSERT INTO Episode VALUES (201, 'Before a Fall','01:00:02',7, 'TheWitcherS1E7.M2TS', 18);
 INSERT INTO Episode VALUES (202, 'Much More','01:00:02',8, 'TheWitcherS1E8.M2TS', 18);
 
-INSERT INTO Episode VALUES (76, 'The Dead','00:50:02',10, 'VikingsS3E10.M2TS', 7);
 INSERT INTO Subtitles (subtitleID, language, subtitlesFile, episodeID) VALUES (0, 'Português', 'GoTS1E1SUBPT.srt', 0);
 INSERT INTO Subtitles (subtitleID, language, subtitlesFile, episodeID) VALUES (1, 'Português', 'GoTS1E2SUBPT.srt', 1);
 INSERT INTO Subtitles (subtitleID, language, subtitlesFile, episodeID) VALUES (2, 'Português', 'GoTS1E3SUBPT.srt', 2);
