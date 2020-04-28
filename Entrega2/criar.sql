@@ -18,7 +18,7 @@ CREATE TABLE ClientAccount (
 DROP TABLE IF EXISTS Country;
 CREATE TABLE Country (
     countryInitials     TEXT PRIMARY KEY CHECK (length(countryInitials) = 2),
-    countryName         TEXT NOT NULL
+    countryName         TEXT NOT NULL UNIQUE
 );
 
 -- AccountType table
@@ -26,8 +26,7 @@ DROP TABLE IF EXISTS AccountType;
 CREATE TABLE AccountType (
     type                TEXT PRIMARY KEY CHECK(type = 'Basic' OR type = 'Standard' OR type = 'Premium'),
     screenNumber        INTEGER NOT NULL CHECK(screenNumber < 5 AND screenNumber > 0),
-    price               REAL NOT NULL CHECK(price = 7.99 OR price = 10.99 OR price = 13.99)
-    CHECK((type = 'Basic' AND price = 7.99) OR (type = 'Standard' AND price = 10.99) OR (type = 'Premium' AND price = 13.99))
+    price               REAL NOT NULL CHECK(price > 0)
 );
 
 -- Payment table

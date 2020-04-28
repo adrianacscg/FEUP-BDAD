@@ -252,7 +252,6 @@ INSERT INTO Season VALUES (17, 5, 8);
 INSERT INTO Season VALUES (18, 1, 9);
  
 
-
 INSERT INTO Episode VALUES (0, 'Winter is Coming','01:00:02',1, 'GoTS1E1.M2TS', 0);
 INSERT INTO Episode VALUES (1, 'The kingsroad','00:59:02',2, 'GoTS1E2.M2TS', 0);
 INSERT INTO Episode VALUES (2, 'Lord Snow','01:00:02',3, 'GoTS1E3.M2TS', 0);
@@ -454,6 +453,7 @@ INSERT INTO Episode VALUES (199, 'Bottled Appetites','01:00:02',5, 'TheWitcherS1
 INSERT INTO Episode VALUES (200, 'Rare Species','01:00:02',6, 'TheWitcherS1E6.M2TS', 18);
 INSERT INTO Episode VALUES (201, 'Before a Fall','01:00:02',7, 'TheWitcherS1E7.M2TS', 18);
 INSERT INTO Episode VALUES (202, 'Much More','01:00:02',8, 'TheWitcherS1E8.M2TS', 18);
+
 
 INSERT INTO Subtitles (subtitleID, language, subtitlesFile, episodeID) VALUES (0, 'Português', 'GoTS1E1SUBPT.srt', 0);
 INSERT INTO Subtitles (subtitleID, language, subtitlesFile, episodeID) VALUES (1, 'Português', 'GoTS1E2SUBPT.srt', 1);
