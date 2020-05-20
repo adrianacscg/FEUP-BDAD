@@ -3,7 +3,7 @@
 .nullvalue NULL
 
 -- Sugeridos com sucesso, ou seja, o User viu esse conteúdo pouco depois de ter sido sugerido 
--- (Estamos o intervalo de tempo como tendo 48 horas)
+-- (Assumindo o intervalo de tempo que determina o sucesso como tendo 48 horas no máximo)
 
 SELECT Suggest.userID, Content.title, Content.type, suggestionDate, timeOfDay AS visualizationDate
 FROM Suggest

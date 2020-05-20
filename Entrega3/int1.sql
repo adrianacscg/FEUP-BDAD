@@ -2,8 +2,7 @@
 .headers on
 .nullvalue NULL
 
--- Mostra os nomes dos utlizadores que já viram todos os episódios de uma série
-
+-- Mostra os nomes dos Users que já viram todos os episódios de uma série
 
 CREATE VIEW [TotalEpisodesInSeries] AS
 SELECT Series.contentID, Content.title, COUNT(Series.contentID) AS totalEps
@@ -14,7 +13,6 @@ ON Season.seriesID = Series.contentID
 INNER JOIN Content 
 ON Series.contentID = Content.contentID
 GROUP BY Content.contentID;
-
 
 SELECT name
 FROM USER
@@ -29,6 +27,5 @@ WHERE User.userID IN (
     GROUP BY userID, Season.seriesID
     HAVING T.totalEps = COUNT(DISTINCT Episode.episodeID)
 );
-
 
 DROP VIEW IF EXISTS [TotalEpisodesInSeries];

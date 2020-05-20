@@ -2,9 +2,9 @@
 .headers on
 .nullvalue NULL
 
---Número total de clientes por faixa etária 
+--Número total de Clients por faixa etária 
 
-SELECT ageGroup, COUNT (*) AS numberOfUsers
+SELECT ageGroup, COUNT (*) AS numberOfClients
 FROM (SELECT * , 
     (CASE
         WHEN DATE('now')-DATE(dateOfBirth) < 19 THEN '0 - 18'

@@ -2,9 +2,9 @@
 .headers on
 .nullvalue NULL
 
--- Países com maior número de clientes
+-- Países com maior número de Users
 
-SELECT Country.countryInitials, COUNT(userID) AS numberOfClients
+SELECT Country.countryInitials, COUNT(userID) AS numberOfUsers
 FROM Country 
 NATURAL JOIN (ClientAccount 
 INNER JOIN User 
