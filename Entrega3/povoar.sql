@@ -591,7 +591,7 @@ INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeSta
 INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeStampFinal, userID, movieID) VALUES (17, '2019-10-12 23:40', '2019-10-12 23:40', '2019-10-13 00:57', 10, 5);
 INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeStampFinal, userID, movieID) VALUES (18, '2017-10-21 17:34', '2017-10-21 17:34', '2017-10-21 18:59', 8, 16);
 INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeStampFinal, userID, movieID) VALUES (19, '2018-10-09 23:05', '2018-10-09 23:05', '2018-10-10 00:18', 7, 5);
-INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeStampFinal, userID, movieID) VALUES (20, '2019-03-31 18:11', '2019-03-31 18:11', '2019-03-31 19:55', 9, 3);
+INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeStampFinal, userID, movieID) VALUES (20, '2019-05-17 18:11', '2019-05-17 18:11', '2019-05-17 19:55', 9, 3);
 INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeStampFinal, userID, episodeID) VALUES (21, '2019-03-31 22:33', '2019-03-31 22:33', '2019-03-31 23:00', 10, 6);
 INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeStampFinal, userID, episodeID) VALUES (22, '2018-04-01 23:36', '2018-04-01 23:36', '2018-04-01 0:49', 4, 1);
 INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeStampFinal, userID, episodeID) VALUES (23, '2017-03-21 12:38', '2017-03-21 12:38', '2017-03-21 12:40', 1, 5);
@@ -612,7 +612,7 @@ INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeSta
 INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeStampFinal, userID, episodeID) VALUES (38, '2020-01-06 20:18', '2020-01-06 20:18', '2020-01-06 20:41', 5, 3);
 INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeStampFinal, userID, episodeID) VALUES (39, '2020-02-31 4:16', '2020-02-31 4:16', '2020-02-31 4:19', 7, 5);
 INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeStampFinal, userID, episodeID) VALUES (40,'2020-11-07 23:23','2020-11-07 23:23','2020-11-08 1:00',0,0);
-INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeStampFinal, userID, episodeID) VALUES (41,'2020-10-11 18:20','2020-10-11 18:20','2020-10-11 18:21',0,0);
+INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeStampFinal, userID, episodeID) VALUES (41,'2020-03-31 18:20','2020-03-31 18:20','2020-03-31 18:21',0,48);
 
 INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeStampFinal, userID, episodeID) VALUES (42,'2020-04-11 18:20','2020-04-11 18:20','2020-04-11 19:20',0,195);
 INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeStampFinal, userID, episodeID) VALUES (43,'2020-04-12 18:20','2020-04-12 18:20','2020-04-12 19:20',0,196);
