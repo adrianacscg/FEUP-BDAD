@@ -50,6 +50,7 @@ INSERT INTO User VALUES (8,'Gustavo', 3);
 INSERT INTO User VALUES (9,'Francisco', 3);
 INSERT INTO User VALUES (10,'Grace', 4);
 INSERT INTO User VALUES (11,'Phoebe', 4);
+INSERT INTO User VALUES (12, 'Maria', 0);
 
 INSERT INTO Content VALUES (0,'Series','Game of Thrones',8.5,'2012-01-01','GoT_trailer.M2TS');
 INSERT INTO Content VALUES (1,'Series','Altered Carbon',6.5,'2015-02-20','AltCarb_trailer.M2TS');

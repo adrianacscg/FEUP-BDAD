@@ -2,7 +2,7 @@
 .headers on
 .nullvalue NULL
 
--- Países com maior número de Users
+-- Países com maior número de Users, ordenados por ordem descendente
 
 SELECT Country.countryInitials, COUNT(userID) AS numberOfUsers
 FROM Country 

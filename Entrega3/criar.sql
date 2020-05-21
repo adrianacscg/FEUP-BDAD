@@ -25,7 +25,7 @@ CREATE TABLE Country (
 DROP TABLE IF EXISTS AccountType;
 CREATE TABLE AccountType (
     type                TEXT PRIMARY KEY CHECK(type = 'Basic' OR type = 'Standard' OR type = 'Premium'),
-    screenNumber        INTEGER NOT NULL CHECK(screenNumber < 5 AND screenNumber > 0),
+    screenNumber        INTEGER NOT NULL CHECK(screenNumber <= 4 AND screenNumber > 0),
     price               REAL NOT NULL CHECK(price > 0)
 );
 
