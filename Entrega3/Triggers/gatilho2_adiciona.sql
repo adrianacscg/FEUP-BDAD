@@ -12,5 +12,6 @@ WHEN strftime('%J', New.timeOfDay) - strftime('%J', (SELECT releaseDate FROM Con
 BEGIN
 SELECT RAISE(ROLLBACK, 'Não é possível inserir uma visualização antes do filme ser lançado!');
 END;
-DROP TRIGGER IF EXISTS priorVisualization;
+
+
 

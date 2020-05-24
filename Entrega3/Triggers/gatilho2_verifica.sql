@@ -10,6 +10,7 @@ ORDER BY movieRelease DESC;
 
 INSERT INTO Content VALUES (17,'Movie','Joker',10,'2019-10-03','WhySoSeriousTrailer.M2TS');
 INSERT INTO Movie VALUES (17, 'WhySoSerious.M2TS', '02:02');
+SELECT * FROM Movie;
 
 SELECT title,releaseDate AS movieRelease
 FROM Content 
