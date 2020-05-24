@@ -3,6 +3,7 @@
 .nullvalue NULL
 
 -- Episódios que cada User deixou por acabar, ou seja, o tempo visto é menor que o tempo total do episódio
+-- totalTime é dado em Minutos, assim como o tempo que passou a ver o episódio
 
 -- Cria uma tabela temporária com as informaçoes completas de uma série
 WITH seriesFullInfo AS (
