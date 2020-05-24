@@ -4,12 +4,13 @@
 
 PRAGMA foreign_keys = ON;
 
--- Cada ClientAccount pode ter apenas entre 1 a 5 Users associados
+-- Não permite que seja criado uma visualização com o dia da visualização mais antigo do que o dia de lançamento do filme
 
-CREATE TRIGGER IF NOT EXISTS priorVisualization
-BEFORE INSERT ON Visualization
-SELECT CASE
-WHEN New.timeOfDay > (SELECT releaseDate FROM Content WHERE New.movieID == Content.contentID)
+CREATE TRIGGER
+EFORE INSERT ON Visualization
+WHEN strftime('%J', New.timeOfDay) > strftime('%J', (SELECT releaseDate FROM Content WHERE New.movieID = Content.contentID)) 
 BEGIN
-    SELECT RAISE(ROLLBACK, 'Não é possível inserir uma visualização antes do filme ser lançado!');
+SELECT RAISE(ROLLBACK, 'Não é possível inserir uma visualização antes do filme ser lançado!');
 END;
+DROP TRIGGER IF EXISTS priorVisualization;
+
