@@ -2,7 +2,7 @@
 .headers on
 .nullvalue NULL
 
--- Filmes assistidos pelos Users
+-- Filmes assistidos pelos pares de Users
 
 select name as Users, title AS Movies 
 FROM User,Visualization 
