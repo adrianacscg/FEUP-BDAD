@@ -12,6 +12,8 @@ CREATE VIEW topMovies AS select count(userID) AS viwers,title FROM Visualization
 DROP VIEW IF EXISTS [seriesFullInfo];
 CREATE VIEW seriesFullInfo AS SELECT * FROM Content JOIN Season ON Content.contentID == Season.seriesID JOIN Episode ON Episode.seasonID == Season.seasonID;
 
+-- Relacionando Visualizations com seriesFullInfo conseguimos ver quantos users viram qlqr ep de uma serie e logo relacionamos essa visualization a um user vendo qlqr série
+
 DROP VIEW IF EXISTS [topSeries];
 CREATE VIEW topSeries AS SELECT COUNT(userID) as viwers, seriesFullInfo.title FROM Visualization JOIN seriesFullInfo ON seriesFullInfo.episodeID == Visualization.episodeID GROUP BY seriesFullInfo.seriesID;
 
