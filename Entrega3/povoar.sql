@@ -51,6 +51,7 @@ INSERT INTO User VALUES (9,'Francisco', 3);
 INSERT INTO User VALUES (10,'Grace', 4);
 INSERT INTO User VALUES (11,'Phoebe', 4);
 INSERT INTO User VALUES (12, 'Maria', 0);
+INSERT INTO User VALUES (13, 'Joao', 0);
 
 INSERT INTO Content VALUES (0,'Series','Game of Thrones',8.5,'2012-01-01','GoT_trailer.M2TS');
 INSERT INTO Content VALUES (1,'Series','Altered Carbon',6.5,'2015-02-20','AltCarb_trailer.M2TS');
@@ -622,3 +623,7 @@ INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeSta
 INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeStampFinal, userID, episodeID) VALUES (47, '2020-04-16 18:20', '2020-04-16 18:20', '2020-04-16 19:20', 0, 200);
 INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeStampFinal, userID, episodeID) VALUES (48, '2020-04-17 18:20', '2020-04-17 18:20', '2020-04-17 19:20', 0, 201);
 INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeStampFinal, userID, episodeID) VALUES (49, '2020-04-18 18:20', '2020-04-18 18:20', '2020-04-18 19:20', 0, 202);
+INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeStampFinal, userID, movieID) VALUES (50, '2018-10-09 23:05', '2018-10-09 23:05', '2018-10-10 00:18', 1, 11);
+INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeStampFinal, userID, movieID) VALUES (51, '2018-10-09 23:05', '2018-10-09 23:05', '2018-10-10 00:18', 4, 11);
+INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeStampFinal, userID, movieID) VALUES (52, '2019-10-06 16:31', '2019-10-06 16:31', '2019-10-06 17:20', 6, 11);
+INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeStampFinal, userID, movieID) VALUES (53, '2019-10-06 16:31', '2019-10-06 16:31', '2019-10-06 17:20', 7, 11);
