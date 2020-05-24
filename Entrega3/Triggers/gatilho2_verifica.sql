@@ -17,10 +17,3 @@ INSERT INTO Visualization (visualizationID, timeOfDay, timeStampInitial, timeSta
 SELECT visualizationID,timeOfDay, movieID
 FROM Visualization ORDER BY timeOfDay DESC;
 
-INSERT INTO Content VALUES (17,'Movie','Joker',10,'2019-10-03','WhySoSerious.M2TS');
-
-INSERT INTO User VALUES (14, 'Filipa', 0);
-
-SELECT clientID, COUNT(*) AS numberOfUsers
-FROM User 
-GROUP BY clientID;
