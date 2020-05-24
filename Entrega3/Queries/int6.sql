@@ -1,7 +1,8 @@
 .mode columns
 .headers on
+.nullvalue NULL
 
--- os 5 filmes com maior classificação
+-- Os 5 filmes com maior classificação
 
 SELECT title AS Título, rating AS Rating
 FROM content
