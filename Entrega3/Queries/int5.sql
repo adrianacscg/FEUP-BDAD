@@ -27,6 +27,8 @@ ON Content.contentID == Season.seriesID
 JOIN Episode 
 ON Episode.seasonID == Season.seasonID;
 
+-- Relacionando Visualizations com seriesFullInfo conseguimos ver quantos users viram qlqr ep de uma serie e logo relacionamos essa visualization a um user vendo qlqr série
+
 DROP VIEW IF EXISTS [topSeries];
 
 CREATE VIEW topSeries AS 
