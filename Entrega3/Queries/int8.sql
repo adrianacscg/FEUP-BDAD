@@ -1,7 +1,8 @@
 .mode columns
 .headers on
+.nullvalue NULL
 
--- categoria de conteúdo que cada utilizador mais gosta
+-- Categoria de conteúdo que cada utilizador mais gosta
 
 SELECT User, Categoria
 FROM (SELECT Like.userID AS User, Like.contentID, CategoryContent.categoryName AS Categoria, COUNT(CategoryContent.categoryName) AS Count 
