@@ -4,7 +4,7 @@
 
 PRAGMA foreign_keys = ON;
 
--- Na introduçao de legendas é verificado se já há um ficheiro com legendas nessa língua 
+-- Na introduçao de legendas é verificado se já há um ficheiro com legendas nessa língua, caso haja então não permite a inserção do novo ficheiro
 
 CREATE TRIGGER RepeatedSubtitles
 BEFORE INSERT ON Subtitles

@@ -4,7 +4,6 @@
 
 PRAGMA foreign_keys = ON;
 
-
 SELECT clientID, COUNT(*) AS numberOfUsers
 FROM User 
 GROUP BY clientID;

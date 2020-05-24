@@ -4,8 +4,6 @@
 
 PRAGMA foreign_keys = ON;
 
--- Verifica que a data de visualização de um conteúdo é depois da data de lançamento do conteúdo
-
 SELECT title,releaseDate AS movieRelease
 FROM Content 
 ORDER BY movieRelease DESC;

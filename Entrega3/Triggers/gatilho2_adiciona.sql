@@ -4,7 +4,7 @@
 
 PRAGMA foreign_keys = ON;
 
--- Não permite que seja criado uma visualização com o dia da visualização mais antigo do que o dia de lançamento do filme
+-- Não permite que seja criado uma visualização com a data da visualização mais antiga do que a data de lançamento do filme
 
 CREATE TRIGGER priorVisualizatio
 BEFORE INSERT ON Visualization
