@@ -1,0 +1,8 @@
+PERGUNTAS DE SQL
+
+-- Caminhos com distância maior que 60
+-- Caminhos com middle (dois caminhos juntos) cuja distância total > 120
+-- Terras starting que tenham ligaçao a todas as outras, por ordem alfabética
+-- Locais e o número de caminhos em que estao incluidas (sejam elas locais iniciais ou finais) (?)
+
+(Não tenho a certeza, se alguém se lembrar melhor que mude)
